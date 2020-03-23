@@ -19,7 +19,8 @@ class App extends Component {
       }
       })
       .then((response)=>{
-        console.log(response.data.data.lastChecked)
+        this.setState({ rs: response.data.data }) 
+        console.log(this.state.rs)
       })
       .catch((error)=>{
         console.log(error)
@@ -27,7 +28,7 @@ class App extends Component {
 }
   render() {
   return (<>
-  
+  111 {this.state.rs.lastChecked}
   </>
     
   ) 
